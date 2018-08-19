@@ -1,0 +1,11 @@
+<template name="jsonParse">
+  <block wx:for="{{data}}" wx:key="">
+    <template is="line" data="{{item}}"/>
+  </block>
+</template>
+
+<template name="line">
+  <view style="text-indent:{{item.tab*20}}rpx">
+    {{item.line}}
+  </view>
+</template>
