@@ -4,12 +4,11 @@ function parse(bindName, type, obj, target) {
     nodes = jsonParse(obj)
   }
   let bindData = { parser: target.data.parser || {} }
-  bindData.parser[bindName] = { data: nodes }
+  bindData.parser[bindName] = nodes
   target.setData(bindData)
 }
 function jsonParse(obj) {
   let str = JSON.stringify(obj, null, '~')
-  console.log(str)
   let res = ''
   let lineArr = []
   let tab = 0
